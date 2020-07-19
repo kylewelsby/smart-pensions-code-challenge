@@ -24,7 +24,7 @@ Currently theres no external dependencies, so no requirement to install anything
 ## 🤖 Testing
 
 ```bash
-ruby parser_test.rb
+ruby test/parser_test.rb
 ```
 
 ## 🎓 License
