@@ -28,4 +28,12 @@ Happy with the simple results of the page results
 2020-07-19 21:50:00
 
 Doing a load of refactors to cleanup any duplcations and allow to the unique code flows. 
-Also considering seperating some concerns
+Also considering seperating some concerns. 
+
+2020-07-19 22:10:00
+
+I feel I am at a completion point,  this project suggested 2.5 hours from start to finish.  I'll do one final sweep on the document specifications and code before marking this challenge as completed. 
+
+2020-07-19 22:30:00
+
+Decided to quickly change the output to a simple table layout for a prettier print output. 

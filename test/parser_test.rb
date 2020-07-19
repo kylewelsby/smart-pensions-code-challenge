@@ -14,15 +14,15 @@ class ParserTest < Test::Unit::TestCase
 
   def test_sessions
     parser = Parser.new(FIXTURE_FILE)
-    sessions = parser.sessions
+    sessions = parser.send(:sessions)
     assert_equal('/help_page/1', sessions[0].path)
     assert_equal('126.318.035.038', sessions[0].ip)
   end
 
   def test_page_sessions
     parser = Parser.new(FIXTURE_FILE)
-    assert_equal(80, parser.page_sessions[0].hits)
-    assert_equal(23, parser.page_sessions[0].unique_hits)
+    assert_equal(80, parser.send(:page_sessions)[0].hits)
+    assert_equal(23, parser.send(:page_sessions)[0].unique_hits)
   end
 
   def test_renderes_session_count
@@ -43,5 +43,18 @@ class ParserTest < Test::Unit::TestCase
 /index 23 visits
 /about/2 22 visits
 /about 21 visits), parser.render(Parser::UNIQUE))
+  end
+
+  def test_pretty_print
+    assert_equal(%(+-----------------+------+
++ Path            + Hits +
++-----------------+------+
+| /about/2        |   90 |
+| /contact        |   89 |
+| /index          |   82 |
+| /about          |   81 |
+| /help_page/1    |   80 |
+| /home           |   78 |
++-----------------+------+), Parser.new(FIXTURE_FILE).render_pretty)
   end
 end
