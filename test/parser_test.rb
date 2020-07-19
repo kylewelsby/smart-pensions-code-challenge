@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-require 'test/unit'
-require_relative '../parser.rb'
+require "test/unit"
+require_relative "../parser.rb"
 
-FIXTURE_FILE = File.join(File.dirname(__FILE__), 'fixtures/webserver.log')
+FIXTURE_FILE = File.join(File.dirname(__FILE__), "fixtures/webserver.log")
 
 # Tests for Parser class
 class ParserTest < Test::Unit::TestCase
   def test_accepts_file
     parser = Parser.new(FIXTURE_FILE)
-    assert_equal('test/fixtures/webserver.log', parser.log_file)
+    assert_equal("test/fixtures/webserver.log", parser.log_file)
   end
 
   def test_sessions
     parser = Parser.new(FIXTURE_FILE)
     sessions = parser.send(:sessions)
-    assert_equal('/help_page/1', sessions[0].path)
-    assert_equal('126.318.035.038', sessions[0].ip)
+    assert_equal("/help_page/1", sessions[0].path)
+    assert_equal("126.318.035.038", sessions[0].ip)
   end
 
   def test_page_sessions

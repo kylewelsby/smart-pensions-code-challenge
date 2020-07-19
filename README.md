@@ -41,10 +41,10 @@ ruby test/parser_test.rb
 
 ## 🚨 Linting
 
-This project assumes you have `rubocop` installed globally.
+This project assumes you have `standardrb` installed globally.
 
 ```bash
-rubocop .
+standardrb .
 ```
 
 ## 🎓 License

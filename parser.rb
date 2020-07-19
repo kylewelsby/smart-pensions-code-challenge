@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require './session'
-require './page'
+require "./session"
+require "./page"
 
 # Parser for webserver log files
 class Parser
-  UNIQUE = 'unique'
-  SESSIONS = 'sessions'
+  UNIQUE = "unique"
+  SESSIONS = "sessions"
   attr_accessor :log_file
   def initialize(log_file)
     @log_file = log_file
@@ -28,14 +28,14 @@ class Parser
 
   def pre_render(mode = SESSIONS)
     values = if mode == Parser::UNIQUE
-               sorted_by_unique_visited.map do |item|
-                 { path: item.path, value: item.unique_hits }
-               end
-             else
-               sorted_by_most_visited.map do |item|
-                 { path: item.path, value: item.hits }
-               end
-             end
+      sorted_by_unique_visited.map do |item|
+        {path: item.path, value: item.unique_hits}
+      end
+    else
+      sorted_by_most_visited.map do |item|
+        {path: item.path, value: item.hits}
+      end
+    end
     values
   end
 
@@ -50,9 +50,9 @@ class Parser
   #
   # Returns an ordered string seperated by new lines
   def render(mode = SESSIONS)
-    pre_render(mode).map do |item|
+    pre_render(mode).map { |item|
       "#{item[:path]} #{item[:value]} visits"
-    end.join("\n")
+    }.join("\n")
   end
 
   # disbaled as Rubocop doens't like the simple templating layout below.
@@ -61,12 +61,12 @@ class Parser
   # rubocop:disable Metrics/AbcSize
   def render_pretty(mode = SESSIONS)
     template = [
-      '+-----------------+------+',
-      '+ Path            + Hits +'
+      "+-----------------+------+",
+      "+ Path            + Hits +"
     ]
     template << template[0]
     pre_render(mode).each do |item|
-      template << "| #{item[:path] + ' ' * (15 - item[:path].length)} |   #{item[:value]} |"
+      template << "| #{item[:path] + " " * (15 - item[:path].length)} |   #{item[:value]} |"
     end
     template << template[0]
     template.join("\n")
@@ -79,7 +79,7 @@ class Parser
     data = File.read(log_file)
     sessions = []
     data.each_line do |line|
-      parts = line.split(' ')
+      parts = line.split(" ")
       sessions << Session.new(parts[0], parts[1])
     end
     sessions
