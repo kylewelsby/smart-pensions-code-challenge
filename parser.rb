@@ -70,3 +70,12 @@ class Parser
     pages.join("\n")
   end
 end
+
+# Allow the program to return via command line
+#
+# Examples
+#
+#     ruby parser.rb ./test/fixtures/webserver.log
+#
+# Returns String rendered output of selected mode
+puts Parser.new(ARGV[0]).render(ARGV[1]) if __FILE__ == $PROGRAM_NAME

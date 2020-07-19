@@ -17,14 +17,34 @@ Currently theres no external dependencies, so no requirement to install anything
 
 ## 🎯 Usage
 
+#### Modes
+
+- `sessions` total hit count for each page
+- `unique` unique hit count for each page
+
+Default mode is to return the total page hit count.
 ```bash
-./parser.rb webserver.log
+ruby ./parser.rb ./test/fixtures/webserver.log
+```
+
+You can pass a second argument to select another mode
+
+```bash
+ruby ./parser.rb ./test/fixtures/webserver.log unique
 ```
 
 ## 🤖 Testing
 
 ```bash
 ruby test/parser_test.rb
+```
+
+## 🚨 Linting
+
+This project assumes you have `rubocop` installed globally.
+
+```bash
+rubocop .
 ```
 
 ## 🎓 License
