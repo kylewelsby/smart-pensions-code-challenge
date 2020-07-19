@@ -3,7 +3,7 @@
 
 # Smart Pensions Code Challenge
 
-SmartPensions code challenge completed by [Kyle Welsby](https://github.com/kylewelsby).
+[SmartPensions](https://www.smart.co/careers) code challenge completed by [Kyle Welsby](https://github.com/kylewelsby).
 
 Here I shall write a library that satisfies the requirements defined in [CHALLENGE.pdf](./CHALLENGE.pdf)
 
