@@ -24,3 +24,8 @@ Happy with the simple results of the page results
 /help_page/1 80 visits
 /home 78 visits
 ```
+
+2020-07-19 21:50:00
+
+Doing a load of refactors to cleanup any duplcations and allow to the unique code flows. 
+Also considering seperating some concerns
