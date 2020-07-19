@@ -27,20 +27,20 @@ Happy with the simple results of the page results
 
 2020-07-19 21:50:00
 
-Doing a load of refactors to cleanup any duplcations and allow to the unique code flows. 
-Also considering seperating some concerns. 
+Doing a load of refactors to cleanup any duplications and allow to the unique code flows. 
+Also considering separating some concerns. 
 
 2020-07-19 22:10:00
 
-I feel I am at a completion point,  this project suggested 2.5 hours from start to finish.  I'll do one final sweep on the document specifications and code before marking this challenge as completed. 
+I feel I am at a completion point; this project suggested 2.5 hours from start to finish.  I'll do one final sweep on the document specifications and code before marking this challenge as complete. 
 
 2020-07-19 22:30:00
 
-Decided to quickly change the output to a simple table layout for a prettier print output. 
+Decided to quickly change the output to a simple table layout for prettier print output. 
 
 2020-07-19 23:00:00
 
-Final thoguths. 
+Final thoughts. 
 
-I quickly put in GitHub actions to conduct Continuious Intergration and switch from [RuboCop](https://rubocop.org/) to [StandardRB](https://github.com/testdouble/standard#readme).
-Did not package this project as a rubygem as it's not intented to be published, its just to showcase my code appraoch.  See [ActionCable Bunny](https://github.com/kylewelsby/action-cable-bunny) for a full gem release
+I quickly put in GitHub actions to conduct Continuous Integration and switch from [RuboCop](https://rubocop.org/) to [StandardRB](https://github.com/testdouble/standard#readme).
+Did not package this project as a rubygem as it's not intended to be published, its just to showcase my code approach.  See [ActionCable Bunny](https://github.com/kylewelsby/action-cable-bunny) for a full gem release
