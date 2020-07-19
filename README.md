@@ -1,3 +1,6 @@
+![Lint and Test](https://github.com/kylewelsby/smart-pensions-code-challenge/workflows/Lint%20and%20Test/badge.svg)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
+
 # Smart Pensions Code Challenge
 
 SmartPensions code challenge completed by [Kyle Welsby](https://github.com/kylewelsby).
