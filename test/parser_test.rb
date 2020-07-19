@@ -14,13 +14,18 @@ class ParserTest < Test::Unit::TestCase
 
   def test_renderes_output
     parser = Parser.new(FIXTURE_FILE)
-    assert_equal("/home 90 visits\n/index 80 visits", parser.render)
+    assert_equal(%(/about/2 90 visits
+/contact 89 visits
+/index 82 visits
+/about 81 visits
+/help_page/1 80 visits
+/home 78 visits), parser.render_ordered_by_most_visited)
   end
 
   def test_parse_file
     parser = Parser.new(FIXTURE_FILE)
     page_visits = parser.page_visits
-    assert_equal("/help_page/1", page_visits[0].path)
-    assert_equal("126.318.035.038", page_visits[0].ip)
+    assert_equal('/help_page/1', page_visits[0].path)
+    assert_equal('126.318.035.038', page_visits[0].ip)
   end
 end
